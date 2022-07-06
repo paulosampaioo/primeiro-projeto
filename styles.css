@@ -117,7 +117,7 @@
   }
   footer:hover{
     /*houver é uma pseudo-class que faz uma alteraçao quando PASSO O MOUSE ENCIMA DO BOTAO OU ELEMENTO*/
-    opacity 1;
+    opacity: 1;
   }
   footer a{
     color: purple
