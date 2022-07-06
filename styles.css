@@ -1,0 +1,126 @@
+*{ /* o * é um seletor universal */
+    margin: 0;/* espaço externo */
+    padding: 0;/* o preenchimento interno */
+    box-sizing: border-box;/* calculo pra saber o tamanho da caixa */
+  }
+  html{
+    /*nessa parte estou personalizando as cores da paginas e crei clsses com o nome da determinada classe como dark e pink*/
+    --bg-color: #EDF2FF;
+    --text-color: #00082F;
+    --primary-color:#4263EB;
+    --primary-color-dark:#364fc7;
+  }
+  a{
+    text-decoration: none;
+  }
+  body.dark{
+    --bg-color: #00082F;
+    --text-color: #FFFFFF;
+  }
+  body.yelow{
+    --bg-color: hsl(31, 100%, 50%);
+    --text-color: #5213e6;
+    --primary-color: #f9f107;
+    --primary-color-dark:#4919f7;
+    }
+  body.pink{
+    --bg-color:#FFF0F6;
+    --text-color: #1F000B;
+    --primary-color: #D6336C;
+    --primary-color-dark:#A61E4D;
+  }
+  body.darkpink{
+    --bg-color:#000000;
+    --text-color: #b1b1b1;
+    --primary-color: #e20d58;
+    --primary-color-dark:#e10250;
+  }
+  
+  
+  body{
+    background:var(--bg-color) ;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+  }
+  .container{
+    /*o container e uma classe que botei no body do html pra fazer referencia */
+   /* border: 7px red solid;/* borda da caixa */
+    text-align: center;
+    /* esse comando alinha tudo no centro*/
+    width: 300px;/* largura da caixa */
+    margin: 60px auto;
+    /* primeiro valor (0px) é altura auto segundo valor é lateral */
+  }
+  img{
+    width: 100%;
+    /*usando o seletor de tag img e o comando width largura, a imagem sempre vai seguir a caixa onde esla está.*/
+  
+  }
+  img.avatar{/*criei essa classe avatar no html para que nao meixa diretamente na img, mas sim na classe avatar que é uma imagem*/
+    border-radius: 50%;/*deixa a imagem redonda a medida da porcetagem*/
+    width: 100px;
+    height: 100px;
+    border:var(--primary-color) solid 4px;
+    padding: 3.7px;
+  }
+  h1{
+    font-size: 32px;
+   /*  color: #00082F; */
+    margin-top: 24px;
+    margin-bottom: 8px;
+    /*peguei o TEXTO principal conhecido como h1 e botei as margens*/
+  }
+  p{
+    font-family: 'Roboto Mono', monospace;
+    font-weight:400 ;
+   /* color: #00082F;*/
+    opacity: 0.8;
+    font-size: 18px;
+  }
+  ul{
+    list-style: none;
+    margin: 48px 0;
+    /*tirei os pontos com a ul undefined list  e botei o eslito da lista como none sem nada assim eliminando os pontos ao lado do youtube isntagram etc.*/
+  }
+  
+  
+  ul li a{ /* esse comnado diz procura todos os  UL todos os LI e dentro deles procure todos os A */
+  height: 53px;/* espaço altura */
+  border: 1px solid red;
+  display: flex;/* DESTRAVA algumas propriedades como altura largura align e justfy e mais que eu nao sei a inda, e joga para dentro da caixa */
+  /* display: INLINE; so ocupa o tamanho do conteudo nao recebe propriedades de altura,largura e margens, ela, as caixas que eu botar em inline ficam em linhas */
+  /* display: BLOCK; ele recebe propriedades como largura,altura e margem ele joga o elemento posterior para baixo e o elemento anterio pra cima, não mantem nada em linha, e seu conteudo é a largura(width) toda */
+  align-items: center; /*alinha os itens ao centro*/
+  justify-content: center;/*alinha os conteudos ao centro*/
+  background:var(--primary-color); /* hex(hexadecimal): 0-até-f */
+  /*#4263EB os 2 primeiros numeros equivalem ao vermelho os 2 do meio verde e os 2 ultimos ao azul RGB*/
+  /*color: white;*/
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 16px;/* define o espaço entre os elementos no caso a margem entre os botoes azus na tela*/
+  border-radius: 6px;/*
+  arredonda os botões*/
+  transition:  background 400ms;
+  }
+  
+  /*estudar pseudo-class o houver e outros*/
+  ul li a:hover{
+  /*houver é uma pseudo-class que faz uma alteraçao quando PASSO O MOUSE ENCIMA DO BOTAO OU ELEMENTO*/
+  background: var(--primary-color-dark);
+  }
+  footer{
+    font-weight: 500;
+    font-size:  12px;
+    /*color: white;*/
+    opacity: 0.6;
+    transition:opacity 1;
+  }
+  footer:hover{
+    /*houver é uma pseudo-class que faz uma alteraçao quando PASSO O MOUSE ENCIMA DO BOTAO OU ELEMENTO*/
+    opacity: 1;
+  }
+  footer a{
+    color: purple
+    
+  }
+  
